@@ -1,2 +1,2 @@
-# cv
- Reproducible CV example using "vitae" R package
+# My CV
+ Reproducible CV example using ["vitae"](https://cran.r-project.org/web/packages/vitae/vitae.pdf) R package.
