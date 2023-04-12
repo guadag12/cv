@@ -12,6 +12,7 @@ headcolor: "414141"
 output: 
   vitae::awesomecv:
     keep_tex: true
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
