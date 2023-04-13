@@ -8,11 +8,10 @@ email: guadagonz12@gmail.com
 github: guadag12
 linkedin: guadag12
 twitter: guadag12
-headcolor: "414141"
-output: 
+headcolor: '414141'
+output:
   vitae::awesomecv:
-    keep_tex: true
-  html_document: default
+    keep_tex: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -93,37 +92,44 @@ tribble(
 # Teaching Experience
 
 
-## Coordinator
+## Coordinator & Instructor
+
 ```{r}
 tribble(
-  ~ role, ~ course, ~ organisation, ~ dates,
-"Co-coordinator and Instructor", "Introduction to R for Social Scientists", "Argentine School of New Technologies",  "Mar 2020 - Jul 2021",  
-) %>% 
- brief_entries(glue::glue("\\textbf{<course>}: <role> (<organisation>)", .open = "<", .close = ">"), paste0(dates, "\\newline"), .protect = FALSE)
+  ~ course, ~ organisation, ~ when, ~ url,
+"Introduction to R for Social Scientists", 
+"Argentine School of New Technologies",  
+"Mar 2020 - Jul 2021",
+"\\textit{https://eant.tech/escuela-de-ciencias-de-datos/programas/social-data-analytics}") %>% 
+  
+  brief_entries(glue::glue("\\textbf{<course>}, <organisation> \\newline <url>", .open = "<", .close = ">"), paste0(when), .protect = FALSE)
 ```
+
 
 ## Graduate Teaching Assitant
 
 ```{r}
 tribble(
-  ~ role, ~ course, ~ organisation, ~ dates,
-  "Graduate Teaching Assistant", "Laboratory of Public Policy", "University of Buenos Aires", "Mar 2020 - Jul 2021", 
-  "Graduate Teaching Assistant", "Introduction to Political Science", "University of el Salvador (Argentina)", "Mar 2020 - Jul 2021"
-) %>% 
- brief_entries(glue::glue("\\textbf{<course>}: <role> (<organisation>)", .open = "<", .close = ">"), paste0(dates, "\\newline"), .protect = FALSE)
+ ~ course, ~ organisation, ~ when, ~ url,
+  "Laboratory of Public Policy", "University of Buenos Aires", "Mar 2020 - Jul 2021", "\\textit{http://labpoliticasuba.com/}",
+ "Introduction to Political Science", "University of el Salvador (Argentina)", "Mar 2020 - Jul 2021", ""
+)%>% 
+  
+  brief_entries(glue::glue("\\textbf{<course>}, <organisation> \\newline <url>", .open = "<", .close = ">"), when, .protect = FALSE)
 
 ```
+
 
 ## Intructor
 
 ```{r workshops}
 tribble(
-  ~ role, ~ course, ~ organisation, ~ dates,
-   "Instructor", "Machine Learning with R", "Argentine School of New Technologies",  "Jun 2020 - Aug 2021", 
-   "Instructor", "Introduction to Python", "Argentine School of New Technologies",  "Jun 2020 - Aug 2021", 
-    "Instructor", "Statistics and R for the work life: tools of 21 century to solve everyday problems", "Santa Fé Capacita", "Apr 2021 - May 2021"
+   ~ course, ~ organisation, ~ when,~ url,
+    "Machine Learning with R", "Argentine School of New Technologies",  "Jun 2020 - Aug 2021", "\\textit{ https://eant.tech/escuela-de-ciencias-de-datos/cursos/machine-learning-con-R}",
+   "Introduction to Python", "Argentine School of New Technologies",  "Jun 2020 - Aug 2021", "\\textit{ https://eant.tech/escuela-de-ciencias-de-datos/cursos/introduccion-a-la-programacion-con-python}",
+  "Statistics and R for the work life: tools of 21 century to solve everyday problems", "Santa Fé Capacita", "Apr 2021", ""
 ) %>% 
- brief_entries(glue::glue("\\textbf{<course>}: <role> (<organisation>)", .open = "<", .close = ">"), paste0(dates, "\\newline"), .protect = FALSE)
+  brief_entries(glue::glue("\\textbf{<course>}, <organisation> \\newline <url>", .open = "<", .close = ">"), when, .protect = FALSE)
 ```
 
 # Additional Projects
@@ -160,16 +166,16 @@ tribble(
 ```{r talks}
 tribble(
   ~ when, ~ title, ~ details, ~ where, ~ url,
-  "Nov, 2021", "Analyzing national politics with 'PoliticxsentwitteR'", "Presentation of the package and shiny app of 'PoliticxsentwitteR'", "XV National Congress of Political Science, National University of Rosario",
-  "https://guadag12.github.io/polentwitter-presentation/",
-  "Oct, 2021", "Introduction to social network analysis with R", "Social Network Analysis in R using 'politicxsentwitteR'", "Rladies Buenos Aires", "https://guadag12.github.io/socialnetwork-rladies-talk/",
-  "Sep, 2021", "Introduction to text mining", "Importance of text analytics in social science", "University of Buenos Aires", "https://guadag12.github.io/talk-textmining-uba/",
-    "Jul, 2020", "Introduction to R for social scientists", "Workshop about basic coding in R and statistics", "Argentine School of New Technologies", "https://eant.tech/escuela-de-ciencias-de-datos/cursos/taller-data-analytics-para-ciencias-sociales",
-      "Jul, 2020", "Analyzing Argentine politics with twitter data",
-  "Open Class to learn how to use 'twitteR' and 'rtweet' package in R", "University of Buenos Aires", "https://github.com/labpoliticasuba/Taller-de-Twitter"
+  "Nov 2021", "Analyzing national politics with 'PoliticxsentwitteR'", "Presentation of the package and shiny app of 'PoliticxsentwitteR'", "XV National Congress of Political Science, National University of Rosario",
+  "\\textit{https://guadag12.github.io/polentwitter-presentation/}",
+  "Oct 2021", "Introduction to social network analysis with R", "Social Network Analysis in R using 'politicxsentwitteR'", "Rladies Buenos Aires", "\\textit{https://guadag12.github.io/socialnetwork-rladies-talk/}",
+  "Sep 2021", "Introduction to text mining", "Importance of text analytics in social science", "University of Buenos Aires", "\\textit{https://guadag12.github.io/talk-textmining-uba/}",
+  "Jul 2020", "Introduction to R for social scientists", "Workshop about basic coding in R and statistics", "Argentine School of New Technologies", "\\textit{https://eant.tech/escuela-de-ciencias-de-datos/cursos/taller-data-analytics-para-ciencias-sociales}",
+  "Jul 2020", "Analyzing Argentine politics with twitter data",
+  "Open Class to learn how to use 'twitteR' and 'rtweet' package in R", "University of Buenos Aires", "\\textit{https://github.com/labpoliticasuba/Taller-de-Twitter}"
   
 ) %>% 
-  brief_entries(glue::glue("\\textbf{<title>}: <details> \\newline \\url{<url>}", .open = "<", .close = ">"), when, .protect = FALSE)
+  brief_entries(glue::glue("\\textbf{<title>}: <details> \\newline <url>", .open = "<", .close = ">"), when, .protect = FALSE)
 ```
 
 # Courses
@@ -177,7 +183,7 @@ tribble(
 ```{r courses}
 tribble(
   ~ course, ~ org, ~ loc, ~ dates,
-  "Spring School in Machine Learning", "University of Oxford", "Oxford, United Kingdom", "Mar 2023",
+  "Spring School in Advanced Research Method (Machine Learning's course)", "University of Oxford", "Oxford, United Kingdom", "Mar 2023",
   "Course of Public Policy and Data Science", "Buenos Aires City Council", "Buenos Aires, Argentina", "Jun 2019"
 ) %>% 
   detailed_entries(course, dates, org, loc)
@@ -192,9 +198,9 @@ tribble(
     "Spanish", "Native",
     "English", "Advanced (C1)", 
     "Portuguese", "Limited Proficiency (A1)"
-) %>% 
-  brief_entries(glue::glue("\\textbf{<language>}: <knowledge>", .open = "<", .close = ">"), .protect = FALSE)
-
+)  %>% 
+  brief_entries(glue::glue("\\textbf{<language>}: <knowledge>", .open = "<", .close = ">"), .protect = FALSE
+                )
 ```
 
 
