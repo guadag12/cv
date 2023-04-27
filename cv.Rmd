@@ -4,10 +4,10 @@ date: "`r format(Sys.time(), '%B, %Y')`"
 qualifications: MSc Social Data Science, BSc Political Science
 position: Computational Social Scientist
 address: London, United Kingdom
+www: www.guadagonzalez.com
 email: guadagonz12@gmail.com
 github: guadag12
 linkedin: guadag12
-twitter: guadag12
 headcolor: '414141'
 output:
   vitae::awesomecv:
