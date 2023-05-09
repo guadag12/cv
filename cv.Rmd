@@ -40,7 +40,7 @@ tribble(
 
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
-  "Research Assistant", "Institute of Latin American Studies, University of Columbia", "", "Aug 2021 - Aug 2021", 
+  "Research Assistant", "Institute of Latin American Studies, University of Columbia", "", "Aug 2021 - Aug 2022", 
     list("Collaborate with Professor Maria Victoria Murillo and Professor Gabriel Kessler to manage the design and construction of methodology for applied text mining analysis of scientific networks in R. The investigation is based on 645 papers created by CONICET’s researchers and analyzed sub-communities and how political scientists and sociologists connect with each other. "
     ),
   "Tech Leader", "Network Observatory Research Group, University of Buenos Aires", "Buenos Aires, Argentina", "Mar 2018 - Mar 2022", 
