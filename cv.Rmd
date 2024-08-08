@@ -3,7 +3,7 @@ name: Guadalupe Andrea Gonzalez
 date: "`r format(Sys.time(), '%B, %Y')`"
 qualifications: MSc Social Data Science, BSc Political Science
 position: Computational Social Scientist
-address: London, United Kingdom
+address: Buenos Aires, Argentina
 www: www.guadagonzalez.com
 email: guadagonz12@gmail.com
 github: guadag12
@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r education}
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates,
-  "MSc in Social Data Science (in progress)", "University of Essex", "Colchester, United Kingdom", "Oct. 2022 - Present",
+  "MSc in Social Data Science", "University of Essex", "Colchester, United Kingdom", "Oct. 2022 - Present",
   "Bachelor in Political Science", "University of Buenos Aires", "Buenos Aires, Argentina", "Mar 2013 - Nov. 2018", 
 ) %>% 
   detailed_entries(degree, dates, uni, loc
@@ -40,6 +40,14 @@ tribble(
 
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  "Research Assistant", "Institute of Latin American Studies, University of Columbia", "", "Aug 2021 - Aug 2022", 
+    list("Collaborate with Professor Maria Victoria Murillo and Professor Gabriel Kessler to manage the design and construction of methodology for applied text mining analysis of scientific networks in R. The investigation is based on 645 papers created by CONICET’s researchers and analyzed sub-communities and how political scientists and sociologists connect with each other. "
+    ),
+  "Tech Leader", "Network Observatory Research Group, University of Buenos Aires", "Buenos Aires, Argentina", "Mar 2018 - Mar 2022", 
+    list("Developed “politicxsentwitteR”, the first R package in the Faculty of Social Science at University of Buenos Aires.", 
+         "Analyzed bot behavior during COVID-19; project financed by the European Union (UE), 100 Por Cierto and Argentine Journalism Forum (FOPEA).")
+)
+
   "Research Assistant", "Institute of Latin American Studies, University of Columbia", "", "Aug 2021 - Aug 2022", 
     list("Collaborate with Professor Maria Victoria Murillo and Professor Gabriel Kessler to manage the design and construction of methodology for applied text mining analysis of scientific networks in R. The investigation is based on 645 papers created by CONICET’s researchers and analyzed sub-communities and how political scientists and sociologists connect with each other. "
     ),
